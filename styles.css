@@ -129,8 +129,25 @@ a{color:inherit;text-decoration:none}
   .grid{grid-template-columns:repeat(2,1fr)}
   .features{flex-direction:column}
   .hero-card{width:100%;height:220px;border-radius:12px}
+
+  /* mobile nav */
   .main-nav{display:none}
   .nav-toggle{display:block}
+
+  /* added for mobile menu toggle */
+  .main-nav.open {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    background: var(--card);
+    position: absolute;
+    top: var(--header-height);
+    left: 0;
+    width: 100%;
+    padding: 16px 0;
+    box-shadow: 0 6px 18px rgba(15,15,15,0.12);
+    z-index: 999;
+  }
 }
 
 /* very small screens */
