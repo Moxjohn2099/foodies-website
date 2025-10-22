@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Foodies — About</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <div class="logo"><a href="index.html">Foodies</a></div>
+      <button id="navToggle" class="nav-toggle" aria-label="Toggle navigation">☰</button>
+      <nav class="main-nav" role="navigation" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="about.html">About</a>
+      </nav>
+      <div class="header-actions">
+        <button id="cartBtn" class="cart-btn">Cart (<span id="cartCount">0</span>)</button>
+        <a class="login" href="#">Login</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <section class="container about">
+      <h1>About Foodies</h1>
+      <p>Foodies delivers tasty, freshly prepared food right to your door.</p>
+      <p><a href="menu.html">Go to Menu →</a></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-left">
+        <strong>Foodies</strong>
+        <p>Delivering happiness to your door.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Cart Modal -->
+  <div id="cartModal" class="cart-modal hidden" aria-hidden="true">
+    <div class="cart-content" role="dialog" aria-label="Shopping cart">
+      <button id="closeCart" class="close" aria-label="Close cart">✕</button>
+      <h3>Your Cart</h3>
+      <ul id="cartItems"></ul>
+      <p class="total">Total: ₱<span id="cartTotal">0</span></p>
+      <button id="checkout" class="primary">Checkout</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

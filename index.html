@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Foodies — Home</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <div class="logo"><a href="index.html">Foodies</a></div>
+
+      <button id="navToggle" class="nav-toggle" aria-label="Toggle navigation">☰</button>
+
+      <nav class="main-nav" role="navigation" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="about.html">About</a>
+      </nav>
+
+      <div class="header-actions">
+        <button id="cartBtn" class="cart-btn" aria-label="Open cart">Cart (<span id="cartCount">0</span>)</button>
+        <a class="login" href="#">Login</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <section class="hero container">
+      <div class="hero-left">
+        <h1>Enjoy <span class="accent">Delicious Food</span> In Your Healthy Life</h1>
+        <p>Quick delivery, fresh ingredients, and meals crafted for happiness. Order now and enjoy!</p>
+        <div class="hero-actions">
+          <a class="primary" href="menu.html">Order Now</a>
+          <a class="ghost" href="menu.html#popular">View Menu</a>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="hero-card">
+          <img src="images/hero.jpg" alt="Delicious hero" loading="lazy" onerror="this.onerror=null;this.src='images/placeholder.png'">
+        </div>
+      </div>
+    </section>
+
+    <section class="features container">
+      <div class="feature-card">
+        <img src="images/sushi-combo.jpg" alt="Sushi icon" loading="lazy" onerror="this.onerror=null;this.src='images/placeholder.png'">
+        <h3>Sushi Combo</h3>
+        <p>Freshly rolled sushi, made to order.</p>
+        <a class="small" href="menu.html#popular">See Menu</a>
+      </div>
+
+      <div class="feature-card">
+        <img src="images/fish-and-chips.jpg" alt="Fish & Chips" loading="lazy" onerror="this.onerror=null;this.src='images/placeholder.png'">
+        <h3>French Fries</h3>
+        <p>Crispy and golden, perfect as a side or snack.</p>
+        <a class="small" href="menu.html#popular">See Menu</a>
+      </div>
+
+      <div class="feature-card">
+        <img src="images/grilled-bowl.jpg" alt="Grilled Bowl" loading="lazy" onerror="this.onerror=null;this.src='images/placeholder.png'">
+        <h3>Hot Barbecue</h3>
+        <p>Smoky, tender meats with rich sauces.</p>
+        <a class="small" href="menu.html#popular">See Menu</a>
+      </div>
+    </section>
+
+    <section id="popular" class="popular container">
+      <h2>Our Popular Food Items</h2>
+      <div class="grid">
+        <div class="item-card">
+          <img src="images/pepperoni-pizza.jpg" alt="Pepperoni Pizza" loading="lazy" onerror="this.onerror=null;this.src='images/placeholder.png'">
+          <h3>Pepperoni Pizza</h3>
+          <p class="price">₱350</p>
+          <button class="add" data-name="Pepperoni Pizza" data-price="350">Add to cart</button>
+        </div>
+
+        <div class="item-card">
+          <img src="images/sushi-combo.jpg" alt="Sushi Combo" loading="lazy" onerror="this.onerror=null;this.src='images/placeholder.png'">
+          <h3>Sushi Combo</h3>
+          <p class="price">₱420</p>
+          <button class="add" data-name="Sushi Combo" data-price="420">Add to cart</button>
+        </div>
+
+        <div class="item-card">
+          <img src="images/grilled-bowl.jpg" alt="Grilled Bowl" loading="lazy" onerror="this.onerror=null;this.src='images/placeholder.png'">
+          <h3>Grilled Bowl</h3>
+          <p class="price">₱280</p>
+          <button class="add" data-name="Grilled Bowl" data-price="280">Add to cart</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-left">
+        <strong>Foodies</strong>
+        <p>Delivering happiness to your door.</p>
+      </div>
+      <div class="footer-right">
+        <form id="subscribe">
+          <input type="email" placeholder="Your email" required>
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Cart Modal -->
+  <div id="cartModal" class="cart-modal hidden" aria-hidden="true">
+    <div class="cart-content" role="dialog" aria-label="Shopping cart">
+      <button id="closeCart" class="close" aria-label="Close cart">✕</button>
+      <h3>Your Cart</h3>
+      <ul id="cartItems"></ul>
+      <p class="total">Total: ₱<span id="cartTotal">0</span></p>
+      <button id="checkout" class="primary">Checkout</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
